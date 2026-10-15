@@ -1,33 +1,33 @@
 ---
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git diff:*)
 argument-hint: [message]
-description: Create a git commit with context
+description: 根據目前修改內容建立 Git Commit
 ---
 
-## Context
+## 上下文
 
-- Current git status: !`git status`
-- Current git diff: !`git diff HEAD`
-- Current branch: !`git branch --show-current`
-- Recent commits: !`git log --oneline -10`
+- 目前 Git 狀態：!`git status`
+- 目前 Git 差異：!`git diff HEAD`
+- 目前分支：!`git branch --show-current`
+- 最近的 Commit：!`git log --oneline -10`
 
-## Your task
+## 你的任務
 
-Based on the above changes, create a single git commit.
+根據上述修改，建立單一 Git Commit。
 
-If a message was provided via arguments, use it: $ARGUMENTS
+若透過參數提供訊息，則使用該訊息：$ARGUMENTS
 
-Otherwise, analyze the changes and create an appropriate commit message following conventional commits format:
-- `feat:` for new features
-- `fix:` for bug fixes
-- `docs:` for documentation changes
-- `refactor:` for code refactoring
-- `test:` for adding tests
-- `chore:` for maintenance tasks
+否則，請分析變更並依照 Conventional Commits 格式產生適當的 Commit 訊息：
+- `feat:` 表示新增功能
+- `fix:` 表示修正錯誤
+- `docs:` 表示文件變更
+- `refactor:` 表示程式碼重構
+- `test:` 表示新增測試
+- `chore:` 表示維護工作
 
 ---
-**Last Updated**: August 4, 2026
-**Claude Code Version**: 2.1.220
-**Sources**:
+**最後更新日期**：2026 年 8 月 4 日
+**Claude Code 版本**：2.1.220
+**資料來源**：
 - https://code.claude.com/docs/en/commands
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
+**相容模型**：Claude Fable 5、Claude Opus 5、Claude Sonnet 5、Claude Sonnet 4.6、Claude Opus 4.8、Claude Haiku 4.5

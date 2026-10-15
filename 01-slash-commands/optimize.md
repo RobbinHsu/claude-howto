@@ -1,26 +1,26 @@
 ---
-description: Analyze code for performance issues and suggest optimizations
+description: 分析程式碼效能問題並提出最佳化建議
 ---
 
-# Code Optimization
+# 程式碼最佳化
 
-Review the provided code for the following issues in order of priority:
+請依照以下優先順序，檢查提供的程式碼是否有這些問題：
 
-1. **Performance bottlenecks** - identify O(n²) operations, inefficient loops
-2. **Memory leaks** - find unreleased resources, circular references
-3. **Algorithm improvements** - suggest better algorithms or data structures
-4. **Caching opportunities** - identify repeated computations
-5. **Concurrency issues** - find race conditions or threading problems
+1. **效能瓶頸**——找出 O(n²) 運算和效率不佳的迴圈
+2. **記憶體洩漏**——找出未釋放的資源及循環參照
+3. **演算法改進**——建議更好的演算法或資料結構
+4. **快取機會**——找出重複的運算
+5. **並行處理問題**——找出競爭條件或執行緒問題
 
-Format your response with:
-- Issue severity (Critical/High/Medium/Low)
-- Location in code
-- Explanation
-- Recommended fix with code example
+回應請包含以下項目：
+- 問題嚴重程度（嚴重／高／中／低）
+- 程式碼中的位置
+- 問題說明
+- 附有程式碼範例的修正建議
 
 ---
-**Last Updated**: August 4, 2026
-**Claude Code Version**: 2.1.220
-**Sources**:
+**最後更新日期**：2026 年 8 月 4 日
+**Claude Code 版本**：2.1.220
+**資料來源**：
 - https://code.claude.com/docs/en/commands
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
+**相容模型**：Claude Fable 5、Claude Opus 5、Claude Sonnet 5、Claude Sonnet 4.6、Claude Opus 4.8、Claude Haiku 4.5

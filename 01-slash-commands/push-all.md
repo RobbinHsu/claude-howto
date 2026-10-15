@@ -1,37 +1,37 @@
 ---
-description: Stage all changes, create commit, and push to remote (use with caution)
+description: 將所有變更加入暫存區、建立 Commit 並推送至遠端（請謹慎使用）
 allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*), Bash(git push:*), Bash(git diff:*), Bash(git log:*), Bash(git pull:*)
 ---
 
-# Commit and Push Everything
+# Commit 並推送所有變更
 
-⚠️ **CAUTION**: Stage ALL changes, commit, and push to remote. Use only when confident all changes belong together.
+⚠️ **注意**：這會將「所有」變更加入暫存區、建立 Commit，並推送至遠端。只有在確認所有變更應一併提交時才使用。
 
-## Workflow
+## 工作流程
 
-### 1. Analyze Changes
-Run in parallel:
-- `git status` - Show modified/added/deleted/untracked files
-- `git diff --stat` - Show change statistics
-- `git log -1 --oneline` - Show recent commit for message style
+### 1. 分析變更
+平行執行：
+- `git status`——顯示已修改／新增／刪除／未追蹤的檔案
+- `git diff --stat`——顯示變更統計
+- `git log -1 --oneline`——查看最新 Commit 的訊息格式
 
-### 2. Safety Checks
+### 2. 安全性檢查
 
-**❌ STOP and WARN if detected:**
-- Secrets: `.env*`, `*.key`, `*.pem`, `credentials.json`, `secrets.yaml`, `id_rsa`, `*.p12`, `*.pfx`, `*.cer`
-- API Keys: Any `*_API_KEY`, `*_SECRET`, `*_TOKEN` variables with real values (not placeholders like `your-api-key`, `xxx`, `placeholder`)
-- Large files: `>10MB` without Git LFS
-- Build artifacts: `node_modules/`, `dist/`, `build/`, `__pycache__/`, `*.pyc`, `.venv/`
-- Temp files: `.DS_Store`, `thumbs.db`, `*.swp`, `*.tmp`
+**❌ 若偵測到下列內容，請停止並警告：**
+- 機密資料：`.env*`、`*.key`、`*.pem`、`credentials.json`、`secrets.yaml`、`id_rsa`、`*.p12`、`*.pfx`、`*.cer`
+- API 金鑰：任何含有真實值的 `*_API_KEY`、`*_SECRET`、`*_TOKEN` 變數（不含 `your-api-key`、`xxx`、`placeholder` 等佔位符）
+- 大型檔案：未使用 Git LFS 且大小 `>10MB` 的檔案
+- 建置產物：`node_modules/`、`dist/`、`build/`、`__pycache__/`、`*.pyc`、`.venv/`
+- 暫存檔案：`.DS_Store`、`thumbs.db`、`*.swp`、`*.tmp`
 
-**API Key Validation:**
-Check modified files for patterns like:
+**API 金鑰驗證：**
+檢查已修改檔案，尋找以下形式：
 ```bash
-OPENAI_API_KEY=sk-proj-xxxxx  # ❌ Real key detected!
-AWS_SECRET_KEY=AKIA...         # ❌ Real key detected!
-STRIPE_API_KEY=sk_live_...    # ❌ Real key detected!
+OPENAI_API_KEY=sk-proj-xxxxx  # ❌ 偵測到真實金鑰！
+AWS_SECRET_KEY=AKIA...         # ❌ 偵測到真實金鑰！
+STRIPE_API_KEY=sk_live_...    # ❌ 偵測到真實金鑰！
 
-# ✅ Acceptable placeholders:
+# ✅ 可接受的佔位符：
 API_KEY=your-api-key-here
 SECRET_KEY=placeholder
 TOKEN=xxx
@@ -39,121 +39,121 @@ API_KEY=<your-key>
 SECRET=${YOUR_SECRET}
 ```
 
-**✅ Verify:**
-- `.gitignore` properly configured
-- No merge conflicts
-- Correct branch (warn if main/master)
-- API keys are placeholders only
+**✅ 請確認：**
+- `.gitignore` 設定正確
+- 沒有 Merge 衝突
+- 目前分支正確（若為 main／master 則警告）
+- API 金鑰僅使用佔位符
 
-### 3. Request Confirmation
+### 3. 要求確認
 
-Present summary:
+顯示摘要：
 ```
-📊 Changes Summary:
-- X files modified, Y added, Z deleted
-- Total: +AAA insertions, -BBB deletions
+📊 變更摘要：
+- 修改 X 個檔案、新增 Y 個、刪除 Z 個
+- 總計：新增 +AAA 行、刪除 -BBB 行
 
-🔒 Safety: ✅ No secrets | ✅ No large files | ⚠️ [warnings]
-🌿 Branch: [name] → origin/[name]
+🔒 安全性：✅ 無機密資料 | ✅ 無大型檔案 | ⚠️ [警告]
+🌿 分支：[name] → origin/[name]
 
-I will: git add . → commit → push
+接下來將執行：git add . → commit → push
 
-Type 'yes' to proceed or 'no' to cancel.
+輸入 'yes' 繼續，或輸入 'no' 取消。
 ```
 
-**WAIT for explicit "yes" before proceeding.**
+**必須等待使用者明確輸入「yes」，才能繼續。**
 
-### 4. Execute (After Confirmation)
+### 4. 執行（確認之後）
 
-Run sequentially:
+依序執行：
 ```bash
 git add .
-git status  # Verify staging
+git status  # 確認暫存狀態
 ```
 
-### 5. Generate Commit Message
+### 5. 產生 Commit 訊息
 
-Analyze changes and create conventional commit:
+分析變更，並依 Conventional Commits 規範建立訊息：
 
-**Format:**
+**格式：**
 ```
-[type]: Brief summary (max 72 characters)
+[type]: 簡短摘要（最多 72 個字元）
 
-- Key change 1
-- Key change 2
-- Key change 3
-```
-
-**Types:** `feat`, `fix`, `docs`, `style`, `refactor`, `test`, `chore`, `perf`, `build`, `ci`
-
-**Example:**
-```
-docs: Update concept README files with comprehensive documentation
-
-- Add architecture diagrams and tables
-- Include practical examples
-- Expand best practices sections
+- 主要變更 1
+- 主要變更 2
+- 主要變更 3
 ```
 
-### 6. Commit and Push
+**類型：** `feat`、`fix`、`docs`、`style`、`refactor`、`test`、`chore`、`perf`、`build`、`ci`
+
+**範例：**
+```
+docs: 更新概念說明 README，補充完整文件
+
+- 新增架構圖與表格
+- 加入實際操作範例
+- 擴充最佳實務章節
+```
+
+### 6. Commit 與 Push
 
 ```bash
 git commit -m "$(cat <<'EOF'
-[Generated commit message]
+[產生的 Commit 訊息]
 EOF
 )"
-git push  # If fails: git pull --rebase && git push
-git log -1 --oneline --decorate  # Verify
+git push  # 失敗時：git pull --rebase && git push
+git log -1 --oneline --decorate  # 驗證
 ```
 
-### 7. Confirm Success
+### 7. 確認成功
 
 ```
-✅ Successfully pushed to remote!
+✅ 已成功推送至遠端！
 
-Commit: [hash] [message]
-Branch: [branch] → origin/[branch]
-Files changed: X (+insertions, -deletions)
+Commit：[hash] [message]
+分支：[branch] → origin/[branch]
+變更檔案：X（+新增行數、-刪除行數）
 ```
 
-## Error Handling
+## 錯誤處理
 
-- **git add fails**: Check permissions, locked files, verify repo initialized
-- **git commit fails**: Fix pre-commit hooks, check git config (user.name/email)
-- **git push fails**:
-  - Non-fast-forward: `git pull --rebase && git push`
-  - No remote branch: `git push -u origin [branch]`
-  - Protected branch: Use PR workflow instead
+- **git add 失敗**：檢查權限、鎖定檔案，確認儲存庫已初始化
+- **git commit 失敗**：修正 Pre-commit Hooks、檢查 Git 設定（user.name／email）
+- **git push 失敗**：
+  - 無法 Fast-forward：`git pull --rebase && git push`
+  - 沒有遠端分支：`git push -u origin [branch]`
+  - 受保護的分支：改用 PR 工作流程
 
-## When to Use
+## 何時使用
 
-✅ **Good:**
-- Multi-file documentation updates
-- Feature with tests and docs
-- Bug fixes across files
-- Project-wide formatting/refactoring
-- Configuration changes
+✅ **適合的情境：**
+- 更新多個文件
+- 包含測試與文件的功能
+- 跨檔案修正錯誤
+- 整個專案的格式調整／重構
+- 設定變更
 
-❌ **Avoid:**
-- Uncertain what's being committed
-- Contains secrets/sensitive data
-- Protected branches without review
-- Merge conflicts present
-- Want granular commit history
-- Pre-commit hooks failing
+❌ **應避免的情境：**
+- 不確定將要提交什麼
+- 含有機密或敏感資料
+- 未經審查就修改受保護分支
+- 存在 Merge 衝突
+- 希望保留細粒度的 Commit 歷史紀錄
+- Pre-commit Hooks 執行失敗
 
-## Alternatives
+## 替代方案
 
-If user wants control, suggest:
-1. **Selective staging**: Review/stage specific files
-2. **Interactive staging**: `git add -p` for patch selection
-3. **PR workflow**: Create branch → push → PR (use `/pr` command)
+若使用者希望自行控制，請建議：
+1. **選擇性暫存**：檢查指定檔案並加入暫存區
+2. **互動式暫存**：以 `git add -p` 逐段挑選
+3. **PR 工作流程**：建立分支 → Push → PR（使用 `/pr` 指令）
 
-**⚠️ Remember**: Always review changes before pushing. When in doubt, use individual git commands for more control.
+**⚠️ 請記住**：Push 前一定要檢查變更。有疑慮時，逐一使用 Git 指令，以便更精確控制。
 
 ---
-**Last Updated**: August 4, 2026
-**Claude Code Version**: 2.1.220
-**Sources**:
+**最後更新日期**：2026 年 8 月 4 日
+**Claude Code 版本**：2.1.220
+**資料來源**：
 - https://code.claude.com/docs/en/commands
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
+**相容模型**：Claude Fable 5、Claude Opus 5、Claude Sonnet 5、Claude Sonnet 4.6、Claude Opus 4.8、Claude Haiku 4.5

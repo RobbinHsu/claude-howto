@@ -1,30 +1,30 @@
 ---
 name: doc-refactor
-description: Restructure project documentation for clarity and accessibility
+description: 重整專案文件結構，提升清晰度與易讀性
 ---
 
-# Documentation Refactor
+# 文件重構
 
-Refactor project documentation structure adapted to project type:
+依照專案類型調整並重構文件結構：
 
-1. **Analyze project**: Identify type (library/API/web app/CLI/microservices), architecture, and user personas
-2. **Centralize docs**: Move technical documentation to `docs/` with proper cross-references
-3. **Root README.md**: Streamline as entry point with overview, quickstart, modules/components summary, license, contacts
-4. **Component docs**: Add module/package/service-level README files with setup and testing instructions
-5. **Organize `docs/`** by relevant categories:
-   - Architecture, API Reference, Database, Design, Troubleshooting, Deployment, Contributing (adapt to project needs)
-6. **Create guides** (select applicable):
-   - User Guide: End-user documentation for applications
-   - API Documentation: Endpoints, authentication, examples for APIs
-   - Development Guide: Setup, testing, contribution workflow
-   - Deployment Guide: Production deployment for services/apps
-7. **Use Mermaid** for all diagrams (architecture, flows, schemas)
+1. **分析專案**：辨識專案類型（程式庫／API／網頁應用程式／CLI／微服務）、架構及使用者角色
+2. **集中管理文件**：將技術文件移至 `docs/`，並建立適當的交叉參照
+3. **根目錄 README.md**：精簡為入口頁，包含概述、快速入門、模組／元件摘要、授權條款及聯絡資訊
+4. **元件文件**：新增模組／套件／服務層級的 README，說明設定與測試方法
+5. **整理 `docs/`**，依相關類別分類：
+   - 架構、API 參考、資料庫、設計、疑難排解、部署、參與貢獻（依專案需求調整）
+6. **建立指南**（選擇適用項目）：
+   - 使用者指南：提供給應用程式終端使用者的文件
+   - API 文件：API 端點、驗證方式及範例
+   - 開發指南：環境設定、測試與貢獻流程
+   - 部署指南：將服務／應用程式部署至正式環境
+7. **使用 Mermaid** 製作所有圖表（架構、流程及結構描述）
 
-Keep docs concise, scannable, and contextual to project type.
+文件應簡潔、易於瀏覽，且符合專案類型與情境。
 
 ---
-**Last Updated**: August 4, 2026
-**Claude Code Version**: 2.1.220
-**Sources**:
+**最後更新日期**：2026 年 8 月 4 日
+**Claude Code 版本**：2.1.220
+**資料來源**：
 - https://code.claude.com/docs/en/commands
-**Compatible Models**: Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
+**相容模型**：Claude Fable 5、Claude Opus 5、Claude Sonnet 5、Claude Sonnet 4.6、Claude Opus 4.8、Claude Haiku 4.5
