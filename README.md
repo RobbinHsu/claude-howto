@@ -600,59 +600,59 @@ claude -r "feature-auth" "continue implementation"
 </details>
 
 <details>
-<summary>Example Workflows</summary>
+<summary>工作流程範例</summary>
 
-### Complete Code Review Workflow
+### 完整的程式碼審查流程
 
 ```markdown
-# Uses: Slash Commands + Subagents + Memory + MCP
+# 使用：斜線指令 + Subagents + 記憶 + MCP
 
-User: /review-pr
+使用者：/review-pr
 
-Claude:
-1. Loads project memory (coding standards)
-2. Fetches PR via GitHub MCP
-3. Delegates to code-reviewer subagent
-4. Delegates to test-engineer subagent
-5. Synthesizes findings
-6. Provides comprehensive review
+Claude：
+1. 載入專案記憶（程式碼撰寫規範）
+2. 透過 GitHub MCP 取得 PR
+3. 將工作委派給 code-reviewer Subagent
+4. 將工作委派給 test-engineer Subagent
+5. 彙整發現的問題
+6. 提供完整的審查結果
 ```
 
-### Automated Documentation
+### 自動化產生文件
 
 ```markdown
-# Uses: Skills + Subagents + Memory
+# 使用：Skills + Subagents + 記憶
 
-User: "Generate API documentation for the auth module"
+使用者：「為驗證模組產生 API 文件」
 
-Claude:
-1. Loads project memory (doc standards)
-2. Detects doc generation request
-3. Auto-invokes doc-generator skill
-4. Delegates to api-documenter subagent
-5. Creates comprehensive docs with examples
+Claude：
+1. 載入專案記憶（文件撰寫標準）
+2. 辨識出文件產生需求
+3. 自動呼叫 doc-generator Skill
+4. 將工作委派給 api-documenter Subagent
+5. 產生完整文件及範例
 ```
 
-### DevOps Deployment
+### DevOps 部署
 
 ```markdown
-# Uses: Plugins + MCP + Hooks
+# 使用：Plugins + MCP + Hooks
 
-User: /deploy production
+使用者：/deploy production
 
-Claude:
-1. Runs pre-deploy hook (validates environment)
-2. Delegates to deployment-specialist subagent
-3. Executes deployment via Kubernetes MCP
-4. Monitors progress
-5. Runs post-deploy hook (health checks)
-6. Reports status
+Claude：
+1. 執行部署前 Hook（檢查環境）
+2. 將工作委派給 deployment-specialist Subagent
+3. 透過 Kubernetes MCP 執行部署
+4. 監控進度
+5. 執行部署後 Hook（健康狀態檢查）
+6. 回報狀態
 ```
 
 </details>
 
 <details>
-<summary>Directory Structure</summary>
+<summary>目錄結構</summary>
 
 ```
 ├── 01-slash-commands/
@@ -712,170 +712,170 @@ Claude:
 │   └── README.md
 ├── 10-cli/
 │   └── README.md
-└── README.md (this file)
+└── README.md（本檔案）
 ```
 
 </details>
 
 <details>
-<summary>Best Practices</summary>
+<summary>最佳實務</summary>
 
-### Do's
-- Start simple with slash commands
-- Add features incrementally
-- Use memory for team standards
-- Test configurations locally first
-- Document custom implementations
-- Version control project configurations
-- Share plugins with team
+### 建議做法
+- 從簡單的斜線指令開始
+- 逐步加入新功能
+- 使用記憶保存團隊標準
+- 先在本機測試設定
+- 為自訂實作撰寫文件
+- 將專案設定納入版本控制
+- 與團隊分享 Plugins
 
-### Don'ts
-- Don't create redundant features
-- Don't hardcode credentials
-- Don't skip documentation
-- Don't over-complicate simple tasks
-- Don't ignore security best practices
-- Don't commit sensitive data
-
-</details>
-
-<details>
-<summary>Troubleshooting</summary>
-
-### Feature Not Loading
-1. Check file location and naming
-2. Verify YAML frontmatter syntax
-3. Check file permissions
-4. Review Claude Code version compatibility
-
-### MCP Connection Failed
-1. Verify environment variables
-2. Check MCP server installation
-3. Test credentials
-4. Review network connectivity
-
-### Subagent Not Delegating
-1. Check tool permissions
-2. Verify agent description clarity
-3. Review task complexity
-4. Test agent independently
+### 應避免的做法
+- 不要建立功能重複的元件
+- 不要將憑證寫死在程式碼中
+- 不要省略文件
+- 不要把簡單的事情過度複雜化
+- 不要忽略安全性最佳實務
+- 不要 Commit 機密資料
 
 </details>
 
 <details>
-<summary>Testing</summary>
+<summary>疑難排解</summary>
 
-This project includes comprehensive automated testing:
+### 功能無法載入
+1. 檢查檔案位置與命名
+2. 驗證 YAML Frontmatter 語法
+3. 檢查檔案權限
+4. 確認 Claude Code 版本相容性
 
-- **Unit Tests**: Python tests using pytest (Python 3.10, 3.11, 3.12)
-- **Code Quality**: Linting and formatting with Ruff
-- **Security**: Vulnerability scanning with Bandit
-- **Type Checking**: Static type analysis with mypy
-- **Build Verification**: EPUB generation testing
-- **Coverage Tracking**: Codecov integration
+### MCP 連線失敗
+1. 確認環境變數
+2. 檢查 MCP 伺服器是否已安裝
+3. 測試憑證
+4. 檢查網路連線
+
+### Subagent 無法接受委派
+1. 檢查工具權限
+2. 確認代理描述是否清楚
+3. 評估任務複雜度
+4. 單獨測試該代理
+
+</details>
+
+<details>
+<summary>測試</summary>
+
+本專案包含完整的自動化測試：
+
+- **單元測試**：使用 pytest 執行 Python 測試（Python 3.10、3.11、3.12）
+- **程式碼品質**：使用 Ruff 進行程式碼檢查及格式化
+- **安全性**：使用 Bandit 掃描弱點
+- **型別檢查**：使用 mypy 執行靜態型別分析
+- **建置驗證**：測試 EPUB 產生流程
+- **測試涵蓋率追蹤**：整合 Codecov
 
 ```bash
-# Install development dependencies
+# 安裝開發用相依套件
 uv pip install -r requirements-dev.txt
 
-# Run all unit tests
+# 執行全部單元測試
 pytest scripts/tests/ -v
 
-# Run tests with coverage report
+# 執行測試並產生涵蓋率報告
 pytest scripts/tests/ -v --cov=scripts --cov-report=html
 
-# Run code quality checks
+# 檢查程式碼品質
 ruff check scripts/
 ruff format --check scripts/
 
-# Run security scan
+# 執行安全性掃描
 bandit -c pyproject.toml -r scripts/ --exclude scripts/tests/
 
-# Run type checking
+# 執行型別檢查
 mypy scripts/ --ignore-missing-imports
 ```
 
-Tests run automatically on every push to `main`/`develop` and every PR to `main`. See [TESTING.md](.github/TESTING.md) for detailed information.
+每次推送至 `main`／`develop`，以及向 `main` 發出 PR 時，都會自動執行測試。詳細資訊請參閱 [TESTING.md](.github/TESTING.md)。
 
 </details>
 
 <details>
-<summary>EPUB Generation</summary>
+<summary>產生 EPUB</summary>
 
-Want to read this guide offline? Generate an EPUB ebook:
+想離線閱讀本指南嗎？可以產生 EPUB 電子書：
 
 ```bash
 uv run scripts/build_epub.py
 ```
 
-This creates `claude-howto-guide.epub` with all content, including rendered Mermaid diagrams.
+此指令會建立 `claude-howto-guide.epub`，其中包含所有內容及已渲染的 Mermaid 圖表。
 
-See [scripts/README.md](scripts/README.md) for more options.
-
-</details>
-
-<details>
-<summary>Contributing</summary>
-
-Found an issue or want to contribute an example? We'd love your help!
-
-**Please read [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines on:**
-- Types of contributions (examples, docs, features, bugs, feedback)
-- How to set up your development environment
-- Directory structure and how to add content
-- Writing guidelines and best practices
-- Commit and PR process
-
-**Our Community Standards:**
-- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) - How we treat each other
-- [SECURITY.md](SECURITY.md) - Security policy and vulnerability reporting
-
-### Reporting Security Issues
-
-If you discover a security vulnerability, please report it responsibly:
-
-1. **Use GitHub Private Vulnerability Reporting**: https://github.com/luongnv89/claude-howto/security/advisories
-2. **Or read** [.github/SECURITY_REPORTING.md](.github/SECURITY_REPORTING.md) for detailed instructions
-3. **Do NOT** open a public issue for security vulnerabilities
-
-Quick start:
-1. Fork and clone the repository
-2. Create a descriptive branch (`add/feature-name`, `fix/bug`, `docs/improvement`)
-3. Make your changes following the guidelines
-4. Submit a pull request with a clear description
-
-**Need help?** Open an issue or discussion, and we'll guide you through the process.
+其他選項請參閱 [scripts/README.md](scripts/README.md)。
 
 </details>
 
 <details>
-<summary>Additional Resources</summary>
+<summary>參與貢獻</summary>
 
-- [Claude Code Documentation](https://code.claude.com/docs/en/overview)
-- [MCP Protocol Specification](https://modelcontextprotocol.io)
-- [Skills Repository](https://github.com/luongnv89/skills) - Collection of ready-to-use skills
+發現問題，或想貢獻範例嗎？歡迎你的協助！
+
+**請先閱讀 [CONTRIBUTING.md](CONTRIBUTING.md)，了解以下詳細規範：**
+- 貢獻類型（範例、文件、功能、錯誤修正、意見回饋）
+- 如何設定開發環境
+- 目錄結構，以及如何新增內容
+- 撰寫規範與最佳實務
+- Commit 與 PR 流程
+
+**我們的社群規範：**
+- [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md)——成員間的相處原則
+- [SECURITY.md](SECURITY.md)——安全性政策與弱點通報
+
+### 回報安全性問題
+
+如果發現安全性弱點，請負責任地進行通報：
+
+1. **使用 GitHub 私密弱點通報**：https://github.com/luongnv89/claude-howto/security/advisories
+2. **或參閱** [.github/SECURITY_REPORTING.md](.github/SECURITY_REPORTING.md) 了解詳細說明
+3. **不要**為安全性弱點開啟公開的 Issue
+
+快速入門：
+1. Fork 並 Clone 此儲存庫
+2. 建立描述清楚的分支（`add/feature-name`、`fix/bug`、`docs/improvement`）
+3. 依照規範修改內容
+4. 提交附有明確說明的 Pull Request
+
+**需要協助嗎？** 可以開啟 Issue 或 Discussion，我們會引導你完成流程。
+
+</details>
+
+<details>
+<summary>其他資源</summary>
+
+- [Claude Code 官方文件](https://code.claude.com/docs/en/overview)
+- [MCP 通訊協定規格](https://modelcontextprotocol.io)
+- [Skills 儲存庫](https://github.com/luongnv89/skills)——可直接使用的 Skills 集合
 - [Anthropic Cookbook](https://github.com/anthropics/anthropic-cookbook)
-- [Boris Cherny's Claude Code Workflow](https://x.com/bcherny/status/2007179832300581177) - The creator of Claude Code shares his systematized workflow: parallel agents, shared CLAUDE.md, Plan mode, slash commands, subagents, and verification hooks for autonomous long-running sessions.
+- [Boris Cherny 的 Claude Code 工作流程](https://x.com/bcherny/status/2007179832300581177)——Claude Code 的創作者分享其系統化工作流程：平行代理、共用 CLAUDE.md、規劃模式、斜線指令、Subagents，以及供長時間自主執行工作使用的驗證 Hooks。
 
 </details>
 
 ---
 
-## Contributing
+## 參與貢獻
 
-We welcome contributions! Please see our [Contributing Guide](CONTRIBUTING.md) for details on how to get started.
-
----
-
-## License
-
-MIT License - see [LICENSE](LICENSE). Free to use, modify, and distribute. The only requirement is including the license notice.
+歡迎參與貢獻！如何開始請參閱[貢獻指南](CONTRIBUTING.md)。
 
 ---
 
-**Last Updated**: October 10, 2026
-**Claude Code Version**: 2.1.296
-**Sources**:
+## 授權條款
+
+MIT 授權——詳見 [LICENSE](LICENSE)。可自由使用、修改與散布；唯一要求是保留授權聲明。
+
+---
+
+**最後更新日期**：2026 年 10 月 10 日
+**Claude Code 版本**：2.1.296
+**資料來源**：
 - https://code.claude.com/docs/en/tools-reference#task-tool-availability
 - https://code.claude.com/docs/en/hooks
 - https://code.claude.com/docs/en/overview
@@ -887,4 +887,4 @@ MIT License - see [LICENSE](LICENSE). Free to use, modify, and distribute. The o
 - https://code.claude.com/docs/en/model-config
 - https://github.com/anthropics/claude-code/blob/main/CHANGELOG.md
 - https://github.com/anthropics/claude-code/releases/tag/v2.1.296
-**Compatible Models**: Claude Fable 5.1, Claude Fable 5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 4.5
+**相容模型**：Claude Fable 5.1、Claude Fable 5、Claude Opus 5.5、Claude Opus 5、Claude Sonnet 5、Claude Sonnet 4.6、Claude Opus 4.8、Claude Haiku 4.5
