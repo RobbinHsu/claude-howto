@@ -231,52 +231,52 @@ MIT 授權。永久免費。你可以複製、Fork，並依自己的需求使用
 ---
 
 <details>
-<summary>Quick Navigation — All Features</summary>
+<summary>快速導覽——全部功能</summary>
 
-| Feature | Description | Folder |
-|---------|-------------|--------|
-| **Feature Catalog** | Complete reference with installation commands | [CATALOG.md](CATALOG.md) |
-| **Slash Commands** | User-invoked shortcuts | [01-slash-commands/](01-slash-commands/) |
-| **Memory** | Persistent context | [02-memory/](02-memory/) |
-| **Skills** | Reusable capabilities | [03-skills/](03-skills/) |
-| **Subagents** | Specialized AI assistants | [04-subagents/](04-subagents/) |
-| **MCP Protocol** | External tool access | [05-mcp/](05-mcp/) |
-| **Hooks** | Event-driven automation | [06-hooks/](06-hooks/) |
-| **Plugins** | Bundled features | [07-plugins/](07-plugins/) |
-| **Checkpoints** | Session snapshots & rewind | [08-checkpoints/](08-checkpoints/) |
-| **Advanced Features** | Planning, thinking, background tasks | [09-advanced-features/](09-advanced-features/) |
-| **CLI Reference** | Commands, flags, and options | [10-cli/](10-cli/) |
-| **Blog Posts** | Real-world usage examples | [Blog Posts](https://medium.com/@luongnv89) |
-
-</details>
-
-<details>
-<summary>Feature Comparison</summary>
-
-| Feature | Invocation | Persistence | Best For |
-|---------|-----------|------------|----------|
-| **Slash Commands** | Manual (`/cmd`) | Session only | Quick shortcuts |
-| **Memory** | Auto-loaded | Cross-session | Long-term learning |
-| **Skills** | Auto-invoked | Filesystem | Automated workflows |
-| **Subagents** | Auto-delegated | Isolated context | Task distribution |
-| **MCP Protocol** | Auto-queried | Real-time | Live data access |
-| **Hooks** | Event-triggered | Configured | Automation & validation |
-| **Plugins** | One command | All features | Complete solutions |
-| **Checkpoints** | Manual/Auto | Session-based | Safe experimentation |
-| **Planning Mode** | Manual/Auto | Plan phase | Complex implementations |
-| **Background Tasks** | Manual | Task duration | Long-running operations |
-| **CLI Reference** | Terminal commands | Session/Script | Automation & scripting |
+| 功能 | 說明 | 資料夾 |
+|------|------|--------|
+| **功能目錄** | 包含安裝指令的完整參考資料 | [CATALOG.md](CATALOG.md) |
+| **斜線指令** | 使用者主動呼叫的快捷指令 | [01-slash-commands/](01-slash-commands/) |
+| **記憶** | 跨工作階段保留的上下文 | [02-memory/](02-memory/) |
+| **Skills** | 可重複使用的能力 | [03-skills/](03-skills/) |
+| **Subagents** | 專門執行特定工作的 AI 助理 | [04-subagents/](04-subagents/) |
+| **MCP 通訊協定** | 存取外部工具 | [05-mcp/](05-mcp/) |
+| **Hooks** | 事件驅動的自動化 | [06-hooks/](06-hooks/) |
+| **Plugins** | 打包好的功能集合 | [07-plugins/](07-plugins/) |
+| **檢查點** | 工作階段快照與回復 | [08-checkpoints/](08-checkpoints/) |
+| **進階功能** | 規劃、思考與背景任務 | [09-advanced-features/](09-advanced-features/) |
+| **CLI 參考** | 指令、旗標及選項 | [10-cli/](10-cli/) |
+| **部落格文章** | 真實的使用範例 | [部落格文章](https://medium.com/@luongnv89) |
 
 </details>
 
 <details>
-<summary>Installation Quick Reference</summary>
+<summary>功能比較</summary>
+
+| 功能 | 呼叫方式 | 持續性 | 最適合 |
+|------|----------|--------|--------|
+| **斜線指令** | 手動（`/cmd`） | 僅限工作階段 | 快捷操作 |
+| **記憶** | 自動載入 | 跨工作階段 | 長期學習 |
+| **Skills** | 自動呼叫 | 檔案系統 | 自動化工作流程 |
+| **Subagents** | 自動委派 | 獨立上下文 | 工作分派 |
+| **MCP 通訊協定** | 自動查詢 | 即時資料 | 取得最新資料 |
+| **Hooks** | 事件觸發 | 依設定 | 自動化與驗證 |
+| **Plugins** | 單一指令 | 全部功能 | 完整解決方案 |
+| **檢查點** | 手動／自動 | 以工作階段為單位 | 安全地嘗試新做法 |
+| **規劃模式** | 手動／自動 | 規劃階段 | 複雜實作 |
+| **背景任務** | 手動 | 任務執行期間 | 長時間執行的作業 |
+| **CLI 參考** | 終端機指令 | 工作階段／腳本 | 自動化與腳本編寫 |
+
+</details>
+
+<details>
+<summary>安裝快速參考</summary>
 
 ```bash
-# Slash Commands
+# 斜線指令
 cp 01-slash-commands/*.md .claude/commands/
 
-# Memory
+# 記憶
 cp 02-memory/project-CLAUDE.md ./CLAUDE.md
 
 # Skills
@@ -297,174 +297,174 @@ chmod +x ~/.claude/hooks/*.sh
 # Plugins
 /plugin install pr-review
 
-# Checkpoints (auto-enabled, configure in settings)
-# See 08-checkpoints/README.md
+# 檢查點（預設自動啟用，可在設定中調整）
+# 請參閱 08-checkpoints/README.md
 
-# Advanced Features (configure in settings)
-# See 09-advanced-features/config-examples.json
+# 進階功能（於設定中調整）
+# 請參閱 09-advanced-features/config-examples.json
 
-# CLI Reference (no installation needed)
-# See 10-cli/README.md for usage examples
+# CLI 參考（不需要安裝）
+# 使用範例請參閱 10-cli/README.md
 ```
 
 </details>
 
 <details>
-<summary>01. Slash Commands</summary>
+<summary>01. 斜線指令</summary>
 
-**Location**: [01-slash-commands/](01-slash-commands/)
+**位置**：[01-slash-commands/](01-slash-commands/)
 
-**What**: User-invoked shortcuts stored as Markdown files
+**用途**：儲存為 Markdown 檔案、由使用者呼叫的快捷指令。
 
-**Examples**:
-- `optimize.md` - Code optimization analysis
-- `pr.md` - Pull request preparation
-- `generate-api-docs.md` - API documentation generator
+**範例**：
+- `optimize.md`——程式碼最佳化分析
+- `pr.md`——準備 Pull Request
+- `generate-api-docs.md`——產生 API 文件
 
-**Installation**:
+**安裝方式**：
 ```bash
 cp 01-slash-commands/*.md /path/to/project/.claude/commands/
 ```
 
-**Usage**:
+**使用方式**：
 ```
 /optimize
 /pr
 /generate-api-docs
 ```
 
-**Learn More**: [Discovering Claude Code Slash Commands](https://medium.com/@luongnv89/discovering-claude-code-slash-commands-cdc17f0dfb29)
+**延伸閱讀**：[認識 Claude Code 斜線指令](https://medium.com/@luongnv89/discovering-claude-code-slash-commands-cdc17f0dfb29)
 
 </details>
 
 <details>
-<summary>02. Memory</summary>
+<summary>02. 記憶</summary>
 
-**Location**: [02-memory/](02-memory/)
+**位置**：[02-memory/](02-memory/)
 
-**What**: Persistent context across sessions
+**用途**：在不同工作階段之間保留上下文。
 
-**Examples**:
-- `project-CLAUDE.md` - Team-wide project standards
-- `directory-api-CLAUDE.md` - Directory-specific rules
-- `personal-CLAUDE.md` - Personal preferences
+**範例**：
+- `project-CLAUDE.md`——整個團隊的專案標準
+- `directory-api-CLAUDE.md`——特定目錄的規則
+- `personal-CLAUDE.md`——個人偏好
 
-**Installation**:
+**安裝方式**：
 ```bash
-# Project memory
+# 專案記憶
 cp 02-memory/project-CLAUDE.md /path/to/project/CLAUDE.md
 
-# Directory memory
+# 目錄記憶
 cp 02-memory/directory-api-CLAUDE.md /path/to/project/src/api/CLAUDE.md
 
-# Personal memory
+# 個人記憶
 cp 02-memory/personal-CLAUDE.md ~/.claude/CLAUDE.md
 ```
 
-**Usage**: Automatically loaded by Claude
+**使用方式**：Claude 會自動載入。
 
 </details>
 
 <details>
 <summary>03. Skills</summary>
 
-**Location**: [03-skills/](03-skills/)
+**位置**：[03-skills/](03-skills/)
 
-**What**: Reusable, auto-invoked capabilities with instructions and scripts
+**用途**：包含操作指示與腳本、可重複使用且會自動呼叫的能力。
 
-**Examples**:
-- `code-review-specialist/` - Comprehensive code review with scripts
-- `brand-voice/` - Brand voice consistency checker
-- `doc-generator/` - API documentation generator
+**範例**：
+- `code-review-specialist/`——包含腳本的完整程式碼審查
+- `brand-voice/`——品牌語氣一致性檢查
+- `doc-generator/`——API 文件產生工具
 
-**Installation**:
+**安裝方式**：
 ```bash
-# Personal skills
+# 個人 Skills
 cp -r 03-skills/code-review-specialist ~/.claude/skills/
 
-# Project skills
+# 專案 Skills
 cp -r 03-skills/code-review-specialist /path/to/project/.claude/skills/
 ```
 
-**Usage**: Automatically invoked when relevant
+**使用方式**：在適當情境下自動呼叫。
 
 </details>
 
 <details>
 <summary>04. Subagents</summary>
 
-**Location**: [04-subagents/](04-subagents/)
+**位置**：[04-subagents/](04-subagents/)
 
-**What**: Specialized AI assistants with isolated contexts and custom prompts
+**用途**：具有獨立上下文和自訂提示詞的專業 AI 助理。
 
-**Examples**:
-- `code-reviewer.md` - Comprehensive code quality analysis
-- `test-engineer.md` - Test strategy and coverage
-- `documentation-writer.md` - Technical documentation
-- `secure-reviewer.md` - Security-focused review (read-only)
-- `implementation-agent.md` - Full feature implementation
+**範例**：
+- `code-reviewer.md`——完整的程式碼品質分析
+- `test-engineer.md`——測試策略與涵蓋率
+- `documentation-writer.md`——技術文件撰寫
+- `secure-reviewer.md`——以安全性為重點的審查（唯讀）
+- `implementation-agent.md`——完整功能實作
 
-**Installation**:
+**安裝方式**：
 ```bash
 cp 04-subagents/*.md /path/to/project/.claude/agents/
 ```
 
-**Usage**: Automatically delegated by main agent
+**使用方式**：由主要代理自動委派工作。
 
 </details>
 
 <details>
-<summary>05. MCP Protocol</summary>
+<summary>05. MCP 通訊協定</summary>
 
-**Location**: [05-mcp/](05-mcp/)
+**位置**：[05-mcp/](05-mcp/)
 
-**What**: Model Context Protocol for accessing external tools and APIs
+**用途**：Model Context Protocol（模型上下文通訊協定），用於存取外部工具及 API。
 
-**Examples**:
-- `github-mcp.json` - GitHub integration
-- `database-mcp.json` - Database queries
-- `filesystem-mcp.json` - File operations
-- `multi-mcp.json` - Multiple MCP servers
+**範例**：
+- `github-mcp.json`——GitHub 整合
+- `database-mcp.json`——資料庫查詢
+- `filesystem-mcp.json`——檔案操作
+- `multi-mcp.json`——多個 MCP 伺服器
 
-**Installation**:
+**安裝方式**：
 ```bash
-# Set environment variables
+# 設定環境變數
 export GITHUB_TOKEN="your_token"
 export DATABASE_URL="postgresql://..."
 
-# Add MCP server via CLI
+# 透過 CLI 新增 MCP 伺服器
 claude mcp add github -- npx -y @modelcontextprotocol/server-github
 
-# Or add to project .mcp.json manually (see 05-mcp/ for examples)
+# 或手動加入專案的 .mcp.json（範例請參閱 05-mcp/）
 ```
 
-**Usage**: MCP tools are automatically available to Claude once configured
+**使用方式**：MCP 工具設定完成後，Claude 就會自動使用。
 
 </details>
 
 <details>
 <summary>06. Hooks</summary>
 
-**Location**: [06-hooks/](06-hooks/)
+**位置**：[06-hooks/](06-hooks/)
 
-**What**: Event-driven shell commands that execute automatically in response to Claude Code events
+**用途**：在 Claude Code 事件發生時自動執行的 Shell 指令。
 
-**Examples**:
-- `format-code.sh` - Auto-format code before writing
-- `pre-commit.sh` - Run tests before commits
-- `security-scan.sh` - Scan for security issues
-- `log-bash.sh` - Log all bash commands
-- `validate-prompt.sh` - Validate user prompts
-- `notify-team.sh` - Send notifications on events
+**範例**：
+- `format-code.sh`——寫入前自動格式化程式碼
+- `pre-commit.sh`——Commit 前執行測試
+- `security-scan.sh`——掃描安全性問題
+- `log-bash.sh`——記錄所有 Bash 指令
+- `validate-prompt.sh`——驗證使用者提示詞
+- `notify-team.sh`——通知團隊成員
 
-**Installation**:
+**安裝方式**：
 ```bash
 mkdir -p ~/.claude/hooks
 cp 06-hooks/*.sh ~/.claude/hooks/
 chmod +x ~/.claude/hooks/*.sh
 ```
 
-Configure hooks in `~/.claude/settings.json`:
+在 `~/.claude/settings.json` 設定 Hooks：
 ```json
 {
   "hooks": {
@@ -480,122 +480,122 @@ Configure hooks in `~/.claude/settings.json`:
 }
 ```
 
-**Usage**: Hooks execute automatically on events
+**使用方式**：事件發生時，Hooks 會自動執行。
 
-**Hook Types** (5): `command`, `http`, `prompt`, `mcp_tool`, `agent` — how a hook runs.
+**Hook 類型**（5 種）：`command`、`http`、`prompt`、`mcp_tool`、`agent`——指定 Hook 的執行方式。
 
-**Hook Events** (33, in 4 categories) — when it runs:
-- **Tool Hooks**: `PreToolUse`, `PostToolUse`, `PostToolUseFailure`, `PostToolBatch`, `PermissionRequest`, `PermissionDenied`
-- **Session Hooks**: `SessionStart`, `Setup`, `SessionEnd`, `Stop`, `StopFailure`, `SubagentStart`, `SubagentStop`
-- **Task Hooks**: `UserPromptSubmit`, `UserPromptExpansion`, `MessageDisplay`, `TaskCompleted`, `TaskCreated`, `TeammateIdle` — `TaskCompleted` and `TaskCreated` only fire when the todo tools are enabled, which is available by default only on Claude 3.x models, Opus 4 through 4.7, Sonnet 4 through 4.6, and Haiku 4.5 (`CLAUDE_CODE_ENABLE_TODO_TOOLS=1` restores them)
-- **Lifecycle Hooks**: `ConfigChange`, `CwdChanged`, `DirectoryAdded`, `FileChanged`, `PreCompact`, `PostCompact`, `PreModelSwitch`, `PostModelSwitch`, `WorktreeCreate`, `WorktreeRemove`, `Notification`, `InstructionsLoaded`, `Elicitation`, `ElicitationResult`
+**Hook 事件**（33 個，分為 4 類）——指定 Hook 執行的時機：
+- **工具 Hooks**：`PreToolUse`、`PostToolUse`、`PostToolUseFailure`、`PostToolBatch`、`PermissionRequest`、`PermissionDenied`
+- **工作階段 Hooks**：`SessionStart`、`Setup`、`SessionEnd`、`Stop`、`StopFailure`、`SubagentStart`、`SubagentStop`
+- **任務 Hooks**：`UserPromptSubmit`、`UserPromptExpansion`、`MessageDisplay`、`TaskCompleted`、`TaskCreated`、`TeammateIdle`——`TaskCompleted` 與 `TaskCreated` 僅在啟用待辦工具時才會觸發；此工具預設僅在 Claude 3.x、Opus 4 至 4.7、Sonnet 4 至 4.6 和 Haiku 4.5 模型中啟用（設定 `CLAUDE_CODE_ENABLE_TODO_TOOLS=1` 可重新啟用）
+- **生命週期 Hooks**：`ConfigChange`、`CwdChanged`、`DirectoryAdded`、`FileChanged`、`PreCompact`、`PostCompact`、`PreModelSwitch`、`PostModelSwitch`、`WorktreeCreate`、`WorktreeRemove`、`Notification`、`InstructionsLoaded`、`Elicitation`、`ElicitationResult`
 
 </details>
 
 <details>
 <summary>07. Plugins</summary>
 
-**Location**: [07-plugins/](07-plugins/)
+**位置**：[07-plugins/](07-plugins/)
 
-**What**: Bundled collections of commands, agents, MCP, and hooks
+**用途**：將指令、代理、MCP 與 Hooks 打包成完整套件。
 
-**Examples**:
-- `pr-review/` - Complete PR review workflow
-- `devops-automation/` - Deployment and monitoring
-- `documentation/` - Documentation generation
+**範例**：
+- `pr-review/`——完整的 Pull Request 審查流程
+- `devops-automation/`——部署與監控
+- `documentation/`——產生文件
 
-**Installation**:
+**安裝方式**：
 ```bash
 /plugin install pr-review
 /plugin install devops-automation
 /plugin install documentation
 ```
 
-**Usage**: Use bundled slash commands and features
+**使用方式**：使用套件中包含的斜線指令與功能。
 
 </details>
 
 <details>
-<summary>08. Checkpoints and Rewind</summary>
+<summary>08. 檢查點與回復</summary>
 
-**Location**: [08-checkpoints/](08-checkpoints/)
+**位置**：[08-checkpoints/](08-checkpoints/)
 
-**What**: Save conversation state and rewind to previous points to explore different approaches
+**用途**：儲存對話狀態，並回復到先前的時間點以嘗試不同作法。
 
-**Key Concepts**:
-- **Checkpoint**: Snapshot of conversation state
-- **Rewind**: Return to previous checkpoint
-- **Branch Point**: Explore multiple approaches from same checkpoint
+**核心概念**：
+- **檢查點**：對話狀態的快照
+- **回復**：回到先前的檢查點
+- **分支點**：從相同狀態嘗試不同方向
 
-**Usage**:
+**使用方式**：
 ```
-# Checkpoints are created automatically with every user prompt
-# To rewind, press Esc twice or use:
+# 每次輸入使用者提示詞後，系統都會自動建立檢查點
+# 按兩次 Esc，或執行下列指令來回復：
 /rewind
 
-# Then choose from five options:
-# 1. Restore code and conversation
-# 2. Restore conversation
-# 3. Restore code
-# 4. Summarize from here
-# 5. Never mind
+# 接著從五個選項中選擇：
+# 1. 還原程式碼與對話
+# 2. 還原對話
+# 3. 還原程式碼
+# 4. 從這裡開始摘要
+# 5. 取消
 ```
 
-**Use Cases**:
-- Try different implementation approaches
-- Recover from mistakes
-- Safe experimentation
-- Compare alternative solutions
-- A/B testing different designs
+**使用情境**：
+- 嘗試不同的實作方式
+- 從錯誤中復原
+- 安全地進行實驗
+- 比較替代方案
+- 針對不同設計進行 A/B 測試
 
 </details>
 
 <details>
-<summary>09. Advanced Features</summary>
+<summary>09. 進階功能</summary>
 
-**Location**: [09-advanced-features/](09-advanced-features/)
+**位置**：[09-advanced-features/](09-advanced-features/)
 
-**What**: Advanced capabilities for complex workflows and automation
+**用途**：用於複雜自動化工作流程的進階功能。
 
-**Includes**:
-- **Planning Mode** — Create detailed implementation plans before coding
-- **Extended Thinking** — Deep reasoning for complex problems (toggle with `Alt+T` / `Option+T`)
-- **Background Tasks** — Run long operations without blocking
-- **Permission Modes** — `manual` (formerly `default`; `default` still accepted), `acceptEdits`, `plan`, `auto`, `dontAsk`, `bypassPermissions`
-- **Headless Mode** — Run Claude Code in CI/CD: `claude -p "Run tests and generate report"`
-- **Session Management** — `/resume`, `/rename`, `/fork`, `/branch`, `claude -c`, `claude -r`
-- **Configuration** — Customize behavior in `~/.claude/settings.json`
+**涵蓋內容**：
+- **規劃模式**——實作前建立詳細計畫
+- **延伸思考**——深入推理複雜問題（使用 `Alt+T`／`Option+T` 切換）
+- **背景任務**——在不阻塞互動的情況下執行長時間作業
+- **權限模式**——`manual`（原名 `default`，`default` 仍可使用）、`acceptEdits`、`plan`、`auto`、`dontAsk`、`bypassPermissions`
+- **無介面模式**——在 CI/CD 執行 Claude Code：`claude -p "Run tests and generate report"`
+- **工作階段管理**——`/resume`、`/rename`、`/fork`、`/branch`、`claude -c`、`claude -r`
+- **設定**——在 `~/.claude/settings.json` 自訂行為
 
-See [config-examples.json](09-advanced-features/config-examples.json) for complete configurations.
+完整設定請參閱 [config-examples.json](09-advanced-features/config-examples.json)。
 
 </details>
 
 <details>
-<summary>10. CLI Reference</summary>
+<summary>10. CLI 參考</summary>
 
-**Location**: [10-cli/](10-cli/)
+**位置**：[10-cli/](10-cli/)
 
-**What**: Complete command-line interface reference for Claude Code
+**用途**：Claude Code 完整的命令列介面參考。
 
-**Quick Examples**:
+**快速範例**：
 ```bash
-# Interactive mode
+# 互動模式
 claude "explain this project"
 
-# Print mode (non-interactive)
+# 列印模式（非互動）
 claude -p "review this code"
 
-# Process file content
+# 處理檔案內容
 cat error.log | claude -p "explain this error"
 
-# JSON output for scripts
+# JSON 輸出
 claude -p --output-format json "list functions"
 
-# Resume session
+# 繼續先前的工作階段
 claude -r "feature-auth" "continue implementation"
 ```
 
-**Use Cases**: CI/CD pipeline integration, script automation, batch processing, multi-session workflows, custom agent configurations
+**使用情境**：CI/CD 流程整合、腳本自動化、多工作階段工作流程、自訂代理設定。
 
 </details>
 
