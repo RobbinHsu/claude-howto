@@ -15,218 +15,218 @@
 [![Version](https://img.shields.io/badge/version-2.1.296-brightgreen)](CHANGELOG.md)
 [![Claude Code](https://img.shields.io/badge/Claude_Code-2.1+-purple)](https://code.claude.com)
 
-🌐 **Language / Ngôn ngữ / 语言 / Мова:** [English](README.md) | [Tiếng Việt](vi/README.md) | [中文](zh/README.md) | [Українська](uk/README.md) | [日本語](ja/README.md)
+🌐 **語言 / Language / Ngôn ngữ / 语言 / Мова：** [繁體中文](README.md) | [Tiếng Việt](vi/README.md) | [简体中文](zh/README.md) | [Українська](uk/README.md) | [日本語](ja/README.md) | [English（原始版本）](https://github.com/RobbinHsu/claude-howto/blob/main/README.md)
 
-# Master Claude Code in a Weekend
+# 在一個週末掌握 Claude Code
 
-Go from typing `claude` to orchestrating agents, hooks, skills, and MCP servers — with visual tutorials, copy-paste templates, and a guided learning path.
+從輸入 `claude` 開始，逐步學會協調 Agents、Hooks、Skills 與 MCP 伺服器——透過視覺化教學、可直接複製貼上的範本，以及循序漸進的學習路線來完成。
 
-**[Get Started in 15 Minutes](#get-started-in-15-minutes)** | **[Find Your Level](#not-sure-where-to-start)** | **[Browse the Feature Catalog](CATALOG.md)**
-
----
-
-## Table of Contents
-
-- [The Problem](#the-problem)
-- [How Claude How To Fixes This](#how-claude-how-to-fixes-this)
-- [How It Works](#how-it-works)
-- [Not Sure Where to Start?](#not-sure-where-to-start)
-- [Get Started in 15 Minutes](#get-started-in-15-minutes)
-- [What Can You Build With This?](#what-can-you-build-with-this)
-- [FAQ](#faq)
-- [Contributing](#contributing)
-- [License](#license)
+**[15 分鐘快速入門](#15-分鐘快速入門)** | **[找到適合自己的起點](#不知道從哪裡開始)** | **[瀏覽功能目錄](CATALOG.md)**
 
 ---
 
-## The Problem
+## 目錄
 
-You installed Claude Code. You ran a few prompts. Now what?
-
-- **The official docs describe features — but don't show you how to combine them.** You know slash commands exist, but not how to chain them with hooks, memory, and subagents into a workflow that actually saves hours.
-- **There's no clear learning path.** Should you learn MCP before hooks? Skills before subagents? You end up skimming everything and mastering nothing.
-- **Examples are too basic.** A "hello world" slash command doesn't help you build a production code review pipeline that uses memory, delegates to specialized agents, and runs security scans automatically.
-
-You're leaving 90% of Claude Code's power on the table — and you don't know what you don't know.
-
----
-
-## How Claude How To Fixes This
-
-This isn't another feature reference. It's a **structured, visual, example-driven guide** that teaches you to use every Claude Code feature with real-world templates you can copy into your project today.
-
-| | Official Docs | This Guide |
-|--|---------------|------------|
-| **Format** | Reference documentation | Visual tutorials with Mermaid diagrams |
-| **Depth** | Feature descriptions | How it works under the hood |
-| **Examples** | Basic snippets | Production-ready templates you use immediately |
-| **Structure** | Feature-organized | Progressive learning path (beginner to advanced) |
-| **Onboarding** | Self-directed | Guided roadmap with time estimates |
-| **Self-Assessment** | None | Interactive quizzes to find your gaps and build a personalized path |
-
-### What you get:
-
-- **10 tutorial modules** covering every Claude Code feature — from slash commands to custom agent teams
-- **Copy-paste configs** — slash commands, CLAUDE.md templates, hook scripts, MCP configs, subagent definitions, and full plugin bundles
-- **Mermaid diagrams** showing how each feature works internally, so you understand *why*, not just *how*
-- **A guided learning path** that takes you from beginner to power user in 11-13 hours
-- **Built-in self-assessment** — run `/self-assessment` or `/lesson-quiz hooks` directly in Claude Code to identify gaps
-
-**[Start the Learning Path  ->](LEARNING-ROADMAP.md)**
+- [遇到的問題](#遇到的問題)
+- [Claude How To 如何解決這些問題](#claude-how-to-如何解決這些問題)
+- [運作方式](#運作方式)
+- [不知道從哪裡開始？](#不知道從哪裡開始)
+- [15 分鐘快速入門](#15-分鐘快速入門)
+- [你能用它打造什麼？](#你能用它打造什麼)
+- [常見問題](#常見問題)
+- [參與貢獻](#參與貢獻)
+- [授權條款](#授權條款)
 
 ---
 
-## How It Works
+## 遇到的問題
 
-### 1. Find your level
+你安裝了 Claude Code，也嘗試過幾次提示詞。接下來呢？
 
-Take the [self-assessment quiz](LEARNING-ROADMAP.md#-find-your-level) or run `/self-assessment` in Claude Code. Get a personalized roadmap based on what you already know.
+- **官方文件說明個別功能，卻沒有展示如何組合運用。** 你知道有斜線指令，卻不知道如何將它們與 Hooks、記憶及 Subagents 串接，形成真正能節省數小時的工作流程。
+- **缺乏明確的學習路線。** 應該先學 MCP，還是先學 Hooks？先學 Skills，還是 Subagents？最後每項都只是略讀，卻沒有真正掌握。
+- **範例過於基礎。** 一個「Hello World」等級的斜線指令，無法幫你建構正式環境可用的程式碼審查流程——這種流程需要使用記憶、將工作委派給專業代理，並自動執行安全性掃描。
 
-### 2. Follow the guided path
-
-Work through 10 modules in order — each builds on the last. Copy templates directly into your project as you learn.
-
-### 3. Combine features into workflows
-
-The real power is in combining features. Learn to wire slash commands + memory + subagents + hooks into automated pipelines that handle code reviews, deployments, and documentation generation.
-
-### 4. Test your understanding
-
-Run `/lesson-quiz [topic]` after each module. The quiz pinpoints what you missed so you can fill gaps fast.
-
-**[Get Started in 15 Minutes](#get-started-in-15-minutes)**
+Claude Code 有 90% 的能力被你閒置，而你甚至不知道自己還有哪些事情尚未了解。
 
 ---
 
-## Trusted by Developers
+## Claude How To 如何解決這些問題
 
-- **GitHub stars** from developers who use Claude Code daily
-- **Forks** from teams adapting this guide for their own workflows
-- **Actively maintained** — synced with every Claude Code release (latest: v2.1.296, October 2026)
-- **Community-driven** — contributions from developers who share their real-world configurations
+這不是另一份功能參考手冊，而是一份**結構化、視覺化、以範例為核心的指南**。它會教你使用 Claude Code 的各項功能，並提供可以立即複製到專案使用的實際情境範本。
+
+| | 官方文件 | 本指南 |
+|--|----------|--------|
+| **形式** | 參考文件 | 搭配 Mermaid 圖表的視覺化教學 |
+| **深度** | 功能描述 | 深入了解底層運作方式 |
+| **範例** | 基本程式片段 | 可立即使用的正式環境範本 |
+| **結構** | 依功能分類 | 從初學者到進階使用者的漸進式學習路線 |
+| **入門引導** | 自行探索 | 附預估時間的引導式學習地圖 |
+| **自我評估** | 無 | 互動式測驗，找出知識缺口並規劃個人學習路線 |
+
+### 你可以取得：
+
+- **10 個教學模組**，涵蓋 Claude Code 的各項功能——從斜線指令到自訂代理團隊
+- **可複製貼上的設定**——包括斜線指令、CLAUDE.md 範本、Hook 腳本、MCP 設定、Subagent 定義與完整 Plugin 套件
+- **Mermaid 圖表**，呈現各功能在內部如何運作，讓你不只了解「怎麼做」，也了解「為什麼」
+- **引導式學習路線**，用 11–13 小時從初學者進階到熟練使用者
+- **內建自我評估**——直接在 Claude Code 執行 `/self-assessment` 或 `/lesson-quiz hooks`，找出尚未掌握的部分
+
+**[開始學習路線 →](LEARNING-ROADMAP.md)**
+
+---
+
+## 運作方式
+
+### 1. 找到自己的程度
+
+完成[自我評估測驗](LEARNING-ROADMAP.md#-find-your-level)，或在 Claude Code 執行 `/self-assessment`。系統會根據你已具備的知識產生個人化學習路線。
+
+### 2. 跟著引導路線學習
+
+依順序完成 10 個模組——每個模組都建立在前一個模組的基礎上。學習過程中可直接將範本複製到自己的專案。
+
+### 3. 將功能組合成工作流程
+
+真正的威力來自功能組合。學會串接斜線指令、記憶、Subagents 和 Hooks，建立可處理程式碼審查、部署及文件產生的自動化流程。
+
+### 4. 測試自己的理解程度
+
+完成每個模組後，執行 `/lesson-quiz [topic]`。測驗會指出你尚未掌握的內容，協助你迅速補足知識缺口。
+
+**[15 分鐘快速入門](#15-分鐘快速入門)**
+
+---
+
+## 受到開發者信賴
+
+- **GitHub Stars**——來自每天使用 Claude Code 的開發者
+- **Forks**——來自將本指南調整為團隊工作流程的使用者
+- **持續維護**——隨 Claude Code 各版本更新（最新：2026 年 10 月的 v2.1.296）
+- **社群驅動**——由分享實際設定的開發者共同貢獻
 
 [![Star History Chart](https://api.star-history.com/svg?repos=luongnv89/claude-howto&type=Date)](https://star-history.com/#luongnv89/claude-howto&Date)
 
 ---
 
-## Not Sure Where to Start?
+## 不知道從哪裡開始？
 
-Take the self-assessment or pick your level:
+先進行自我評估，或選擇符合你的程度：
 
-| Level | You can... | Start here | Time |
-|-------|-----------|------------|------|
-| **Beginner** | Start Claude Code and chat | [Slash Commands](01-slash-commands/) | ~2.5 hours |
-| **Intermediate** | Use CLAUDE.md and custom commands | [Skills](03-skills/) | ~3.5 hours |
-| **Advanced** | Configure MCP servers and hooks | [Advanced Features](09-advanced-features/) | ~5 hours |
+| 程度 | 你已經能夠…… | 從這裡開始 | 時間 |
+|------|--------------|------------|------|
+| **初學者** | 啟動 Claude Code 並與其對話 | [斜線指令](01-slash-commands/) | 約 2.5 小時 |
+| **中階** | 使用 CLAUDE.md 和自訂指令 | [Skills](03-skills/) | 約 3.5 小時 |
+| **進階** | 設定 MCP 伺服器及 Hooks | [進階功能](09-advanced-features/) | 約 5 小時 |
 
-**Full learning path with all 10 modules:**
+**包含全部 10 個模組的完整學習路線：**
 
-| Order | Module | Level | Time |
-|-------|--------|-------|------|
-| 1 | [Slash Commands](01-slash-commands/) | Beginner | 30 min |
-| 2 | [Memory](02-memory/) | Beginner+ | 45 min |
-| 3 | [Checkpoints](08-checkpoints/) | Intermediate | 45 min |
-| 4 | [CLI Basics](10-cli/) | Beginner+ | 30 min |
-| 5 | [Skills](03-skills/) | Intermediate | 1 hour |
-| 6 | [Hooks](06-hooks/) | Intermediate | 1 hour |
-| 7 | [MCP](05-mcp/) | Intermediate+ | 1 hour |
-| 8 | [Subagents](04-subagents/) | Intermediate+ | 1.5 hours |
-| 9 | [Advanced Features](09-advanced-features/) | Advanced | 2-3 hours |
-| 10 | [Plugins](07-plugins/) | Advanced | 2 hours |
+| 順序 | 模組 | 程度 | 時間 |
+|------|------|------|------|
+| 1 | [斜線指令](01-slash-commands/) | 初學者 | 30 分鐘 |
+| 2 | [記憶](02-memory/) | 初學者+ | 45 分鐘 |
+| 3 | [檢查點](08-checkpoints/) | 中階 | 45 分鐘 |
+| 4 | [CLI 基礎](10-cli/) | 初學者+ | 30 分鐘 |
+| 5 | [Skills](03-skills/) | 中階 | 1 小時 |
+| 6 | [Hooks](06-hooks/) | 中階 | 1 小時 |
+| 7 | [MCP](05-mcp/) | 中階+ | 1 小時 |
+| 8 | [Subagents](04-subagents/) | 中階+ | 1.5 小時 |
+| 9 | [進階功能](09-advanced-features/) | 進階 | 2–3 小時 |
+| 10 | [Plugins](07-plugins/) | 進階 | 2 小時 |
 
-**[Complete Learning Roadmap ->](LEARNING-ROADMAP.md)**
+**[完整學習路線 →](LEARNING-ROADMAP.md)**
 
 ---
 
-## Get Started in 15 Minutes
+## 15 分鐘快速入門
 
-> **Installation note**: Starting in v2.1.113, Claude Code ships as a native per-platform binary (macOS/Linux/Windows). `npm install -g @anthropic-ai/claude-code` still works — the native binary is downloaded as an optional dep on first use. As of v2.1.116, downloads come from `https://downloads.claude.ai/claude-code-releases` — corporate proxies must allowlist this host.
+> **安裝注意事項**：從 v2.1.113 開始，Claude Code 以各作業系統的原生二進位檔形式提供（macOS／Linux／Windows）。`npm install -g @anthropic-ai/claude-code` 仍然可用——首次使用時，會透過選用相依套件下載原生執行檔。自 v2.1.116 起，下載來源改為 `https://downloads.claude.ai/claude-code-releases`——企業 Proxy 必須將此主機加入允許清單。
 
 ```bash
-# 1. Clone the guide
+# 1. 複製本指南的儲存庫
 git clone https://github.com/luongnv89/claude-howto.git
 cd claude-howto
 
-# 2. Copy your first slash command
+# 2. 複製你的第一個斜線指令
 mkdir -p /path/to/your-project/.claude/commands
 cp 01-slash-commands/optimize.md /path/to/your-project/.claude/commands/
 
-# 3. Try it — in Claude Code, type:
+# 3. 試著使用它——在 Claude Code 輸入：
 # /optimize
 
-# 4. Ready for more? Set up project memory:
+# 4. 想進一步設定？加入專案記憶：
 cp 02-memory/project-CLAUDE.md /path/to/your-project/CLAUDE.md
 
-# 5. Install a skill:
+# 5. 安裝一個 Skill：
 cp -r 03-skills/code-review-specialist ~/.claude/skills/
 ```
 
-Want the full setup? Here's the **1-hour essential setup**:
+想完成完整設定嗎？這是**一小時的基本設定流程**：
 
 ```bash
-# Slash commands (15 min)
+# 斜線指令（15 分鐘）
 cp 01-slash-commands/*.md .claude/commands/
 
-# Project memory (15 min)
+# 專案記憶（15 分鐘）
 cp 02-memory/project-CLAUDE.md ./CLAUDE.md
 
-# Install a skill (15 min)
+# 安裝 Skill（15 分鐘）
 cp -r 03-skills/code-review-specialist ~/.claude/skills/
 
-# Weekend goal: add hooks, subagents, MCP, and plugins
-# Follow the learning path for guided setup
+# 週末目標：加入 Hooks、Subagents、MCP 與 Plugins
+# 按照學習路線逐步完成設定
 ```
 
-**[View the Full Installation Reference](#get-started-in-15-minutes)**
+**[查看完整安裝參考](#15-分鐘快速入門)**
 
 ---
 
-## What Can You Build With This?
+## 你能用它打造什麼？
 
-| Use Case | Features You'll Combine |
-|----------|------------------------|
-| **Automated Code Review** | Slash Commands + Subagents + Memory + MCP |
-| **Team Onboarding** | Memory + Slash Commands + Plugins |
-| **CI/CD Automation** | CLI Reference + Hooks + Background Tasks |
-| **Documentation Generation** | Skills + Subagents + Plugins |
-| **Security Audits** | Subagents + Skills + Hooks (read-only mode) |
-| **DevOps Pipelines** | Plugins + MCP + Hooks + Background Tasks |
-| **Complex Refactoring** | Checkpoints + Planning Mode + Hooks |
-
----
-
-## FAQ
-
-**Is this free?**
-Yes. MIT licensed, free forever. Use it in personal projects, at work, in your team — no restrictions beyond including the license notice.
-
-**Is this maintained?**
-Actively. The guide is synced with every Claude Code release. Current version: v2.1.296 (October 2026), compatible with Claude Code 2.1+.
-
-**How is this different from the official docs?**
-The official docs are a feature reference. This guide is a tutorial with diagrams, production-ready templates, and a progressive learning path. They complement each other — start here to learn, reference the docs when you need specifics.
-
-**How long does it take to go through everything?**
-11-13 hours for the full path. But you'll get immediate value in 15 minutes — just copy a slash command template and try it.
-
-**Can I use this with Claude Sonnet / Haiku / Opus?**
-Yes. All templates work with Claude Fable 5.1, Claude Fable 5, Claude Opus 5.5, Claude Opus 5, Claude Sonnet 5, Claude Sonnet 4.6, Claude Opus 4.8, Claude Haiku 5.5, and Claude Haiku 4.5.
-
-**Can I contribute?**
-Absolutely. See [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines. We welcome new examples, bug fixes, documentation improvements, and community templates.
-
-**Can I read this offline?**
-Yes. Run `uv run scripts/build_epub.py` to generate an EPUB ebook with all content and rendered diagrams.
+| 使用情境 | 組合使用的功能 |
+|----------|----------------|
+| **自動化程式碼審查** | 斜線指令 + Subagents + 記憶 + MCP |
+| **團隊新人導入** | 記憶 + 斜線指令 + Plugins |
+| **CI/CD 自動化** | CLI 參考 + Hooks + 背景任務 |
+| **文件產生** | Skills + Subagents + Plugins |
+| **安全性稽核** | Subagents + Skills + Hooks（唯讀模式） |
+| **DevOps 流程** | Plugins + MCP + Hooks + 背景任務 |
+| **複雜重構** | 檢查點 + 規劃模式 + Hooks |
 
 ---
 
-## Start Mastering Claude Code Today
+## 常見問題
 
-You already have Claude Code installed. The only thing between you and 10x productivity is knowing how to use it. This guide gives you the structured path, the visual explanations, and the copy-paste templates to get there.
+**這是免費的嗎？**
+是的。採用 MIT 授權，永久免費。無論個人專案、工作或團隊內部皆可使用；只需要遵守保留授權聲明的要求。
 
-MIT licensed. Free forever. Clone it, fork it, make it yours.
+**這份指南有持續維護嗎？**
+有。指南會隨 Claude Code 各版本更新。目前版本：v2.1.296（2026 年 10 月），相容於 Claude Code 2.1 以上版本。
 
-**[Start the Learning Path ->](LEARNING-ROADMAP.md)** | **[Browse the Feature Catalog](CATALOG.md)** | **[Get Started in 15 Minutes](#get-started-in-15-minutes)**
+**這和官方文件有什麼不同？**
+官方文件是功能參考資料；本指南則是結合圖表、可用於正式環境的範本，以及漸進式學習路線的教學。兩者相輔相成——先透過本指南學習，需要確認細節時再查閱官方文件。
+
+**學完所有內容需要多久？**
+完整路線約需 11–13 小時。不過，只要 15 分鐘，你就能複製一個斜線指令範本並實際試用，立即體驗其價值。
+
+**可以搭配 Claude Sonnet／Haiku／Opus 使用嗎？**
+可以。所有範本均適用於 Claude Fable 5.1、Claude Fable 5、Claude Opus 5.5、Claude Opus 5、Claude Sonnet 5、Claude Sonnet 4.6、Claude Opus 4.8、Claude Haiku 5.5 及 Claude Haiku 4.5。
+
+**我可以參與貢獻嗎？**
+當然可以。請參閱 [CONTRIBUTING.md](CONTRIBUTING.md) 的說明。我們歡迎新範例、錯誤修正、文件改進，以及社群範本。
+
+**可以離線閱讀嗎？**
+可以。執行 `uv run scripts/build_epub.py`，即可產生包含全部內容及已渲染圖表的 EPUB 電子書。
+
+---
+
+## 從今天開始掌握 Claude Code
+
+你已經安裝 Claude Code。想讓生產力提升十倍，關鍵就在於知道該如何使用它。本指南提供結構化學習路線、視覺化說明，以及可直接複製貼上的範本，幫助你達成目標。
+
+MIT 授權。永久免費。你可以複製、Fork，並依自己的需求使用。
+
+**[開始學習路線 →](LEARNING-ROADMAP.md)** | **[瀏覽功能目錄](CATALOG.md)** | **[15 分鐘快速入門](#15-分鐘快速入門)**
 
 ---
 
